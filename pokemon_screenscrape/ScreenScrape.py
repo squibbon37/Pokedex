@@ -8,7 +8,6 @@ generation = ["I", "II", "III", "IV", "V", "VI"]
 
 def scrapescreen():
     for version in generation:
-        print(version)
         url = "http://pokemon.wikia.com/wiki/Category:Generation_" + version + "_Pok%C3%A9mon"
         content = urllib.request.urlopen(url).read()
         soup = BeautifulSoup(content)
